@@ -1,4 +1,491 @@
 *{
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+}
+
+:root {
+      --sizecontent: minmax(0, 1200px);
+      --paddingBetweenLargeBlocks: 50px 0;
+}
+
+/* Css for elements */
+a {
+      text-decoration: none;
+      color: inherit; 
+}
+
+h2 {
+      padding-bottom: 30px;
+      text-align: center;
+      color: #006bcc;
+}
+
+img{
+      width: 100%;
+}
+
+p{
+      text-align: justify;
+}
+/* Make grid for website */
+
+.grid-container {
+      font-family: 'Open Sans', sans-serif;
+      display: grid;
+      grid-template-columns: 1fr var(--sizecontent) 1fr;
+      grid-template-areas:
+      'header header header'
+      'slideImage slideImage slideImage'
+      'toolsForGuest toolsForGuest toolsForGuest'
+      '. advantage .'
+      'productTypes productTypes productTypes'
+      'finishedProducts finishedProducts finishedProducts'
+      '. newsAndActivites .'
+      'footer footer footer'
+      ;
+      background-image: url(/images/bg01.png);
+      background-repeat: repeat;
+}
+/* ---------------------------------------- */
+.grid-container .header{
+      grid-area: header;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr var(--sizecontent) 1fr;
+      grid-template-areas: 
+      '. navTop .';
+      align-items: center;
+      background-color: #fbfbfb !important;
+      border-bottom: 5px solid #0069c5;
+}
+
+.header .nav-top{
+      grid-area: navTop;
+      display: flex;
+      align-items: center;
+}
+/* ---------------------------------------- */
+.grid-container .slide-image{
+      grid-area: slideImage;
+}
+/* ---------------------------------------- */
+.grid-container .tools-for-guest{
+      grid-area: toolsForGuest;
+      display: grid;
+      grid-template-columns: 1fr var(--sizecontent) 1fr;
+      grid-template-areas: 
+      '. toolsContent .';
+      padding: var(--paddingBetweenLargeBlocks);
+}
+
+.tools-for-guest .tools-content{
+      grid-area: toolsContent;
+      display: flex;
+      flex-wrap: wrap;
+}
+
+.tools-content .self-design {
+      max-width: 48%;
+}
+
+.tools-content .latest-Tech{
+      max-width: 48%;
+      margin-left: auto;
+}
+/* ---------------------------------------- */
+.grid-container .advantage{
+      grid-area: advantage;
+      width: 100%;
+      padding: var(--paddingBetweenLargeBlocks);
+      background-image: url(/images/bg01.png);
+      background-repeat: repeat;
+}
+
+.advantage .reason-list{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: 
+      'reason1 reason2 reason3'
+      'reason4 reason5 reason6'
+      ;
+}
+
+.reason-list .reason1{
+      grid-area: reason1;
+}
+
+.reason-list .reason2{
+      grid-area: reason2;
+}
+
+.reason-list .reason3{
+      grid-area: reason3;
+}
+
+.reason-list .reason4{
+      grid-area: reason4;
+}
+
+.reason-list .reason5{
+      grid-area: reason5;
+}
+
+.reason-list .reason6{
+      grid-area: reason6;
+}
+
+/* ---------------------------------------- */
+.grid-container .product-types{
+      grid-area: productTypes;
+      display: grid;
+      grid-template-columns: 1fr var(--sizecontent) 1fr;
+      grid-template-areas:
+      '. productsContent .'
+      ;
+      background-color: #fff !important;
+      padding: var(--paddingBetweenLargeBlocks);
+}
+
+.product-types .products-content{
+      grid-area: productsContent;
+      text-align: center;
+}
+
+.door-for-house .list-of-product-house{
+      grid-area: listOfProductHouse;
+      display: flex;
+      padding: 30px 0;
+      background-color: #fff;
+      justify-content: space-evenly;
+}
+
+.list-of-product-house div{
+      flex-basis: 250px;
+}
+
+.products-content img{
+      border-radius: 5%;
+}
+
+.door-for-industry .list-of-product-industry {
+      display: flex;
+      padding: 30px 0;
+      justify-content: space-evenly;
+      justify-items: left;
+}
+.list-of-product-industry div{
+      flex-basis: 250px;
+}
+
+.accessories .list-of-product-accessories{
+      display: flex;
+      padding: 30px 0;
+      justify-content: space-evenly;
+}
+
+.list-of-product-accessories div{
+      flex-basis: 250px;
+}
+
+/* ---------------------------------------- */
+.grid-container .finished-products{
+      grid-area: finishedProducts;
+}
+/* ---------------------------------------- */
+.grid-container .news-and-activites{
+      grid-area: newsAndActivites;
+}
+
+.news-and-activites .news-activites-content{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: 
+      'news-1 news-2 news-3 news-4'
+      'news-5 news-6 news-7 news-8'
+      'news-9 news-10 news-11 news-12'
+      ;
+      row-gap: 20px;
+      column-gap: 20px;
+      padding: 0 20px;
+}
+
+.news-activites-content .news-1{
+      grid-area: news-1;
+}
+
+.news-activites-content .news-2{
+      grid-area: news-2;
+}
+
+.news-activites-content .news-3{
+      grid-area: news-3;
+}
+
+.news-activites-content .news-4{
+      grid-area: news-4;
+}
+
+.news-activites-content .news-5{
+      grid-area: news-5;
+
+}.news-activites-content .news-6{
+      grid-area: news-6;
+}
+.news-activites-content .news-7{
+      grid-area: news-7;
+}
+.news-activites-content .news-8{
+      grid-area: news-8;
+}
+.news-activites-content .news-9{
+      grid-area: news-9;
+}
+.news-activites-content .news-10{
+      grid-area: news-10;
+}
+.news-activites-content .news-11{
+      grid-area: news-11;
+}
+.news-activites-content .news-12{
+      grid-area: news-12;
+}
+
+.grid-container .footer{
+      grid-area: footer;
+}
+
+/* make for display example */
+/* .grid-container div:nth-child(even) {
+      background-color: rgb(255, 131, 131);
+}
+
+.grid-container div:nth-child(odd) {
+      background-color: rgb(255, 255, 108);
+} */
+
+/* display nav-top */
+
+.logo-site a:nth-child(2) {
+      display: none;
+}
+
+.nav-menu {
+      font-size: 0.9rem;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+}
+.nav-menu ul:nth-child(1) {
+      list-style-type: none;
+      font-weight: bold;
+      display: flex;
+}
+
+.nav-menu a {
+      color: #2f2f2f;
+      display: block;
+      padding: 30px 5px;
+}
+
+.nav-menu span {    
+      border-right: 1px solid black;
+      border-left: 1px solid black;
+}
+
+.hot-line{
+      display: none;
+}
+
+.search-area {
+      display: flex;
+}
+
+.language {
+      list-style-type: none;
+      padding: 0px 5px;
+}
+
+.language a{
+      padding: 2px 0;
+}
+
+.btn {
+      font-weight: bold;
+}
+
+.reason-list div{
+      max-height:400px;
+}
+
+.title-door-for-house{
+      border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
+      padding: 10px 0;
+}
+
+.display-block a{
+      display: block;
+}
+
+.tools-content a{
+      display: block;
+}
+
+.products-content p{
+      text-align: center;
+}
+
+.news-activites-content img{
+      border: 1px solid #fff;
+      border-radius: 5%;
+      transition: 0.5s;
+}
+
+.news-activites-content img:hover{
+      transform: scale(1.05);
+}
+
+.menu-mobile{
+      display: none;
+      /* width: 40px;
+      height: 40px; */
+}
+
+/* Table: width >= 740px and width < 1024px */
+@media screen and (max-width: 63.9375em) {
+      .advantage .reason-list{
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: 
+            'reason1 reason2'
+            'reason3 reason4'
+            'reason5 reason6'
+            ;
+      }
+
+      .news-and-activites .news-activites-content{
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: 
+            'news-1 news-2 news-3 '
+            'news-4 news-5 news-6 '
+            ;
+            row-gap: 20px;
+            padding: 0 10px;
+      }
+
+      .news-activites-content div:nth-child(n+7) {
+            display: none;
+      }
+      
+      .logo-site a:nth-child(1) {
+            display: none;
+      }
+
+      .logo-site a:nth-child(2) {
+            display: block;
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+      }
+
+      .nav-menu ul:nth-child(1) {
+            display: none;
+      }
+
+      .search-area a{
+            padding:0;
+      }
+      
+      .list-of-product-house div{
+            flex-basis: 200px;
+      }
+
+      .list-of-product-industry div{
+            flex-basis: 200px;
+      }
+      
+      .list-of-product-accessories div{
+            flex-basis: 200px;
+      }
+
+      .grid-container .header{
+            border-bottom: 2px solid #0069c5;
+      }
+
+      h2 {
+            font-size: 1.5rem;;
+      }
+
+      h3{
+            font-size: 1.2rem;
+      }
+
+      .hot-line{
+            display: flex;
+            height: 50px;
+            align-items: center;
+      }
+
+      .hot-line a{
+            padding: 0;
+            font-size: 1.2rem;
+            color: #006bcc;
+            font-weight: bold;
+            flex-basis: 100%;
+      }
+
+      .hot-line img {
+            width: 20px;
+            height: 20px;
+      }
+
+      .menu-mobile{
+            display: block;
+            border-left: 1px #e6e6e6 solid;
+            height: 50px;
+            width: 50px;
+      }
+}
+
+/* Mobile: width < 740px */
+@media screen and (max-width: 46.1875em) {
+      .door-for-industry .list-of-product-industry {
+            flex-wrap: wrap;
+      }
+
+      .accessories .list-of-product-accessories{
+            flex-wrap: wrap;
+      }
+
+      .door-for-house .list-of-product-house{
+            flex-wrap: wrap;
+      }
+
+      .tools-content-descr {
+            display: none;
+      }
+
+      .list-of-product-house div{
+            flex-basis: 150px;
+      }
+
+      .list-of-product-industry div{
+            flex-basis: 150px;
+      }
+      
+      .list-of-product-accessories div{
+            flex-basis: 150px;
+      }
+
+      .news-and-activites {
+            display: none;
+      }
+
+      h2 {
+            font-size: 1.2rem;;
+      }
+
+      h3{
+            font-size: 1rem;
+      }
 }
