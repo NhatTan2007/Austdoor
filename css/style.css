@@ -66,6 +66,10 @@ p{
       display: flex;
       align-items: center;
 }
+
+.header>.nav-top{
+
+}
 /* ---------------------------------------- */
 .grid-container>.slide-image{
       grid-area: slideImage;
