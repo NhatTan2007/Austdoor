@@ -44,7 +44,7 @@ p{
       '. newsAndActivites .'
       'footer footer footer'
       ;
-      background-image: url(/CASESTUDY1/images/bg01.png);
+      background-image: url(/images/bg01.png);
       background-repeat: repeat;
 }
 /* ---------------------------------------- */
@@ -114,7 +114,7 @@ p{
       grid-area: advantage;
       width: 100%;
       padding: var(--paddingBetweenLargeBlocks);
-      background-image: url(/CASESTUDY1/images/bg01.png);
+      background-image: url(/images/bg01.png);
       background-repeat: repeat;
 }
 
@@ -293,7 +293,7 @@ p{
 
 .footer>.adress-copyright{
       grid-area: adressCopyright;
-      background-image: url(/CASESTUDY1/images/bg-footer.png);
+      background-image: url(/images/bg-footer.png);
       color: #fff;
       display: grid;
       grid-template-columns: 1fr var(--sizecontent) 1fr;
