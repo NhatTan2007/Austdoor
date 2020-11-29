@@ -372,7 +372,7 @@ p{
       font-weight: bold;
       background-color: #006bcc;
       color: #fff;
-      max-width: fit-content;
+      max-width: max-content;
       padding: 5px 20px;
       text-align: justify;
       border-radius: 5px;
