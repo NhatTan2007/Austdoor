@@ -36,7 +36,7 @@ p{
       display: grid;
       grid-template-columns: 1fr var(--sizecontent) 1fr;
       grid-template-areas:
-      'slideImage slideImage slideImage'
+      'slideImages slideImages slideImages'
       'toolsForGuest toolsForGuest toolsForGuest'
       '. advantage .'
       'productTypes productTypes productTypes'
@@ -66,14 +66,45 @@ p{
       display: flex;
       align-items: center;
 }
-
-.header>.nav-top{
-
-}
 /* ---------------------------------------- */
-.grid-container>.slide-image{
-      grid-area: slideImage;
-      padding-top: 99px;
+.grid-container>.slide-images{
+      grid-area: slideImages;
+      padding-top: 87px;
+}
+
+.slide-images-content{
+      position: relative;
+      max-height: min-content;
+}
+
+.slide-images-content>a:nth-child(1) {
+      transition: 0.5s;
+}
+
+.slide-images-prev{
+      left: 0;
+      top: 50%;
+      position: absolute;
+}
+
+.slide-images-next{
+      top: 50%;
+      right: 0;
+      position: absolute;
+}
+
+.btn-slide-images{
+      padding: 30px 15px;
+      margin-top:-51px;
+      display: block;
+      cursor: pointer;
+      transition: 0.5s;
+      font-size: 1.5rem;
+      color: #fff;
+}
+
+.btn-slide-images:hover{
+      background-color: rgba(0, 0, 0, 0.486);
 }
 /* ---------------------------------------- */
 .grid-container>.tools-for-guest{
@@ -485,7 +516,7 @@ p{
 
 /* Table: width >= 740px and width < 1024px */
 @media screen and (max-width: 64em) {
-      .grid-container>.slide-image{
+      .grid-container>.slide-images{
             padding-top: 52px;
       }
       .advantage>.reason-list{
