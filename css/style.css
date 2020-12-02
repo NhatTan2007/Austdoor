@@ -560,6 +560,7 @@ p{
 
       .nav-bot>.nav-bot-items{
             flex-basis: 50%;
+            padding-left: 10px;
       }
 
       .nav-bot-items>div{
