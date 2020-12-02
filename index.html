@@ -38,7 +38,19 @@
                                    <li><a href="#"><img src="images/icon/vi-icon.png" alt="Vietnamese"></a></li>
                                    <li><a href="#"><img src="images/icon/en-ico.png" alt="English"></a></li>
                              </ul>
-                             <img class="menu-mobile" src="images/icon/mobile-menu.png" alt="Menu Mobile">
+                             <label for="menu-mobile"><img class="menu-mobile" src="images/icon/mobile-menu.png" alt="Menu Mobile"></label>
+                             <input type="checkbox" name="menu-mobile" id="menu-mobile" onclick="makeNavMenuMobileFadeIn(this)">
+                             <div class="nav-menu-mobile">
+                                   <ul>
+                                         <li><a href="#">GIỚI THIỆU</a></li>
+                                         <li><a href="#">ĐỒNG HÀNH AUSTDOOR</a></li>
+                                         <li><a href="#">SẢN PHẨM</a></li>
+                                         <li><a href="#">MUA Ở ĐÂU</a></li>
+                                         <li><a href="#">BẢO HÀNH</a></li>
+                                         <li><a href="#">TIN TỨC</a></li>
+                                         <li><a href="#">LIÊN HỆ</a></li>
+                                   </ul>
+                             </div>
                         </div>
                   </div>
             </div>
@@ -48,7 +60,6 @@
                         <a class="btn-slide-images slide-images-prev" onclick="prevImage()">&#10094;</a>
                         <a class="btn-slide-images slide-images-next" onclick="nextImage()">&#10095;</a>
                   </div>
-
             </div>
             <div class="tools-for-guest">
                   <div class="tools-content">
@@ -171,7 +182,6 @@
                         </div>
                   </div>
             </div>
-            <div class="finished-products">Finished Products</div>
             <div class="news-and-activites">
                   <h2>THÔNG TIN HỮU ÍCH</h2>
                   <div class="news-activites-content">

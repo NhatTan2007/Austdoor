@@ -14,7 +14,7 @@ let imagesSlideList = [
             alt: "Images Slide 03"
       }
 ]
-
+let intervalHandle = null;
 let index = 0;
 
 
@@ -37,7 +37,7 @@ function changeSlideImages(){
             index++;
       }
       
-      if(index < imagesSlideList.length)
+      if (index < imagesSlideList.length)
       {
             showImages(index);
       }
@@ -49,8 +49,6 @@ function increaseOpacity() {
             getImages.style.opacity = +getImages.style.opacity + 0.01;
       }
 }
-
-startSlideImages()
 
 function nextImage() {
       changeSlideImages();
@@ -65,4 +63,22 @@ function prevImage() {
       showImages(index);
 }
 
-// Change products
+startSlideImages();
+
+// Change Opacity to Fade In Nav Menu Mobile
+function increaseOpacityNavMenuMobile() {
+      let getImages = document.getElementsByClassName("nav-menu-mobile")[0];
+      if(+getImages.style.opacity < 1) {
+            getImages.style.opacity = +getImages.style.opacity + 0.01;
+      }
+}
+
+function makeNavMenuMobileFadeIn(event) {
+      if (event.checked) {
+            intervalHandle = setInterval(increaseOpacityNavMenuMobile,7);
+      } else {
+            clearInterval(intervalHandle);
+            document.getElementsByClassName("nav-menu-mobile")[0].style.opacity = "";
+      }
+      
+}
